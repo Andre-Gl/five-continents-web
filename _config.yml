@@ -11,15 +11,16 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 # theme                  : "minimal-mistakes-jekyll"
-remote_theme           : "mmistakes/minimal-mistakes"
+remote_theme             : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
-title                    : "Site Title"
+locale                   : "ru-RU"
+title                    : "Пять Континентов"
 title_separator          : "-"
-name                     : "Your Name"
-description              : "An amazing website."
+name                     : "ООО «Завод виноградных вин «Пять континентов»"
+description              : "Предприятие группы компаний ООО «ОП НИИ ПКД»."
+logo                     : /assets/images/logo-1.png
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -86,9 +87,12 @@ og_image                 : /assets/images/logo.png # Open Graph/Twitter default 
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
+  type                   : Organization # Person or Organization (defaults to Person)
+  name                   : "ООО «Завод виноградных вин «Пять континентов»" # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+    - https://facebook.com/shtopor.shops/?hl=ru
+    - https://vk.com/shtoporby
+    - https://www.instagram.com/shtopor.shops/?hl=ru
 
 # Analytics
 analytics:
@@ -100,24 +104,24 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "ООО «Завод виноградных вин «Пять континентов»"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
-  email            :
+  bio              : "Предприятие группы компаний ООО «ОП НИИ ПКД»."
+  location         : "РБ, д.Большое Стиклево, ул.Фабричная, д.16, пом.55, 223060"
+  email            : "5kontinentov2017@mail.ru"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         : "shtopor.shops"
   foursquare       :
   github           :
   gitlab           :
   google_plus      :
   keybase          :
-  instagram        :
+  instagram        : "shtopor.shops"
   lastfm           :
   linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
   pinterest        :
@@ -127,6 +131,7 @@ author:
   tumblr           :
   twitter          :
   vine             :
+  vk               : "shtoporby"
   weibo            :
   xing             :
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
@@ -255,6 +260,11 @@ compress_html:
   ignore:
     envs: development
 
+# Collections
+collections:
+  catalog:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -262,6 +272,13 @@ defaults:
   - scope:
       path: ""
       type: pages
+    values:
+      layout: single
+      author_profile: true
+  # _catalog
+  - scope:
+      path: ""
+      type: posts
     values:
       layout: single
       author_profile: true

@@ -1,9 +1,12 @@
 main:
-  - title: "Products"
-    url: /products/
+  - title: "Продукция"
+    url: /catalog/
 
-  - title: "About Us"
+  - title: "Публикации"
+    url: /blog/
+
+  - title: "О Компании"
     url: /about-us/
 
-  - title: "Contact Us"
+  - title: "Контакты"
     url: /contact-us/
